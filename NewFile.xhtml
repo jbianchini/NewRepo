@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-6 form-group">
+        <p:dataTable id="providerBarrierTable" styleClass="table" widgetVar="providerBarrierTable"
+            value="#{newAssessmentView.assessmentProviderBarrierList}" var="assProvBarrier"
+            rowStyleClass="#{(rowIndex mod 2) eq 0 ? 'highlight1' : 'highlight2'}"
+            style="text-align: center;vertical-align: middle">
+            <p:column headerText="#{i18n.label_medical_barrier} #{i18n.label_type}">
+                #{assProvBarrier.providerBarrier.description}</p:column>
+            <p:column headerText="" style="vertical-align: middle; width: 15%;">
+                <p:commandButton styleClass="btn btn-xs btn-info" icon="fa fa-pencil-square-o"
+                    title="#{i18n.label_edit_barrier}"
+                    actionListener="#{newAssessmentView.loadProviderBarrier(assProvBarrier)}"
+                    rendered="#{assProvBarrier.providerBarrier.code eq 'OT'}" process="@this"
+                    update=":form:dlgEditProviderBarrier"
+                    oncomplete="resetChanges(), PrimeFaces.widgets.dlgEditProviderBarrier.show()" />
+
+                <p:commandButton styleClass="btn btn-xs btn-danger" icon="fa fa-trash"
+                    title="#{i18n.label_remove_barrier}"
+                    actionListener="#{newAssessmentView.removeProviderBarrier(assProvBarrier)}" process="@this"
+                    update=":form:assessmentFurtherInfo:providerBarrierPanel,:form:dlgEditProviderBarrier"
+                    oncomplete="resetChanges()" />
+            </p:column>
+        </p:dataTable>
+    </div>
+</div>
