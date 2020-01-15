@@ -11,3 +11,5 @@ commit 4 squash
 commit 5 squash
 
 commit 6 squash
+
+commit 7 squash
