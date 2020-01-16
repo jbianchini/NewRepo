@@ -7,3 +7,5 @@ Commit #3 during squash activity.
 Commit #4 during squash activity.
 
 Some shit to be reverted.
+
+Another sh*t to be reverted.
