@@ -6,4 +6,8 @@ Commit #3 during squash activity.
 
 Commit #4 during squash activity.
 
+Commit #5 during cherry-pick activity.
+
+Commit #6 during cherry-pick activity.
+
 This is the end of the commit activity.
